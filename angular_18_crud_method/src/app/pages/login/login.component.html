@@ -1,18 +1,47 @@
-<div class="bgc center">
-    <div class="container">
-      <div class="header">
-        <h1><span class="l">L</span>OGIN</h1>
-      </div>
-      <form>
-        <label for="uname">Username</label>
-        <input type="text" class="inp" name="uname" required>
-        <label for="psw">Password</label>
-        <input type="password" class="inp" name="psw" required>
-        <button type="submit">Entra</button>
+<div class="parent">
+  <div class="logo">
+
+  </div>
+  <div class="box bg-img">
+    <div class="content">
+
+      <h2>Sign<span> In</span></h2>
+
+      <form [formGroup]="userform">
+        <div class="forms">
+
+          <div class="user-input">
+            <input type="text" formControlName="username" class="login-input" placeholder="user name"
+              id="name" required>
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="pass-input">
+            <input type="password" formControlName="password" class="login-input" placeholder="password"
+              id="my-password" required>
+
+            <span class="eye" onclick="myFunction()">
+              <i id="hide-1" class="fas fa-eye-slash"></i>
+              <i id="hide-2" class="fas fa-eye"></i>
+            </span>
+          </div>
+
+        </div>
       </form>
-      <div class="signup">
-        <b>Non hai un account?</b>
-        <a href="#">Registrati</a>
-      </div>
+
+      <button class="login-btn">Sign In</button>
+
+      <p class="new-account">Not a member? <a href="#">Sign Up now!</a></p>
+
+      <br>
+
+      <p class="f-pass">
+        <a href="#">forget password?</a>
+      </p>
+
     </div>
   </div>
+
+  <script src="https://kit.fontawesome.com/c0078485ae.js"
+    crossorigin="anonymous"></script>
+</div>
